@@ -1,0 +1,6 @@
+.git
+.dockerignore
+.env
+jais/node_modules/
+jais/vendor/bundle/
+jais/tmp/
