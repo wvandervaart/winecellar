@@ -1,5 +1,5 @@
 # Dockerfile development version
-FROM ruby:3.2.2 AS jais-development
+FROM ruby:3.2.2 AS winecellar-development
 
 # Install yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg -o /root/yarn-pubkey.gpg && apt-key add /root/yarn-pubkey.gpg
@@ -12,7 +12,7 @@ RUN mkdir -p $INSTALL_PATH
 
 # Install gems
 WORKDIR $INSTALL_PATH
-COPY jais/ .
+COPY winecellar/ .
 RUN rm -rf node_modules vendor
 RUN gem install rails bundler
 RUN bundle install
